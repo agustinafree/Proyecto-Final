@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- CSS -->	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+	rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
+	<title>Tienda Sobrepresente</title>
+		
+	
+	</head>
+	
+<body>
+	<div class="titulo">
+		<h1> @sobrepesente Tienda</h1>
+		
+		<nav>
+			<a href="index.html" class="btn"> Inicio </a>
+			<button id= "Abajo" class="btn" onclick="parteabajo()">Parte de Abajo </button>
+			<button id= "Arriba" class="btn" onclick="partearriba()">Parte de Arriba </button>
+			<!-- Carrito emergente -->
+			<a href="#" class="cta" >Carrito<i class="fas fa-shopping-cart"></i></a>
+			<!-- <button id= "Suscrp" class="btn btn-primary" onclick="subscribir('${e.id}')">Suscribite a nuestro Newsletter ♥ </button> -->
+			<!-- <a href="pages/carrito.html" class="nav-link badge fs-3"><i id="iconoCarrito" class="fas fa-shopping-cart"></i></a> -->
+			</nav>
+
+			<div id="suscripcion">
+				<!-- Aquí suscripcion -->
+			</div>
+
+			<h2> Todos nuestros productos </h2>
+		</div>
+
+		<div class="modal-container">
+			<div class="modal modal-close">
+				<p class="close">X</p>
+				<div class="modal-textos">	
+										
+						<table class="table">
+							<thead>
+								<tr>					
+									<th scope="col">Nombre</th>
+									<th scope="col">cantidad</th>
+									<th scope="col">Precio</th>
+								</tr>
+						</thead>
+						<tbody id="tabla-contenedor">
+							
+							<p id="total">Total:</p>
+							<div id="contenedor-carrito"></div>
+						</tbody>
+					</table>	
+				
+	
+				</div>
+			</div>
+			
+		</div>	
+
+
+	
+		
+	</div>
+
+		<div class="tablacovid">
+			<h1 class="tablacovid">Covid 19 Datos en vivo</h1>
+				<br><br>
+				<table class="table table-hover">
+					<thead>
+					<tr>
+						<th>Total casos</th> 
+						<th>Total Muertes</th>
+						<th>Total de recuperados</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr id="data">
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</tbody>
+		
+				</table>
+		</div>
+
+		</body>
+		
+	
+		<div class="d-flex justiify-content-around">
+			<div class="my-2"> 
+				<label for="ordenar">ordenar</label>
+				<select name="ordenar" id="ordenar">
+					<option value="  "></option>
+					<option value="menor">Por menor precio</option>
+					<option value="mayor">Por mayor precio</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+		<div class="contenedor">
+			<div id="contenedor-productos"></div>
+			
+
+
+					
+			
+	</div>
+		<!-- productos -->
+		<div class="producto-carrito">
+		</div>
+
+			
+	
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!-- Sweet Alert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Mis scripts -->
+	<script defer src="main.js"></script>
+	<script defer src="productos.js"></script>
+	<script defer src="suscripcion.js"></script>
+	<script defer src="modal.js"></script>
+	<!-- API -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+</body>
+
+	<footer>
+		<p> Instagram @sobrepesente | Envíos a todo el país </p>
+	</footer>
+</html>

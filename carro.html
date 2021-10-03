@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Carrito</title>
+</head>
+<body>
+    <div class="navbar navbar-dark bg-primary mb-10">
+        <div class="nav-item">
+            <a href="../index.html" class="nav-link badge fs-3">Inicio</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-beteween" id="contenedorCarrito">
+        </div>
+    </div>
+
+    <div id="resultado"></div>
+
+    <form action="#" method="GET" id="form">
+        <input type="text" name="name" value="juan">
+        <input type="number" name="precio" id="total">
+        <input type="submit" value="enviar">
+        <Select id="nombre">
+            <option value="1">dolar</option>
+            <option value="peso">peso</option>
+            <option value="bla">bla</option>
+        </Select>
+    </form>
+
+    
+        
+     <!--JQUERY 3.6-->
+     <script src="../jquery/jquery-3.6.0.min.js"></script>
+     <!-- sweet alert-->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <!--Bundle Bootstrap 5-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+     <script src="../js/calses.js"></script>
+     <script src="../js/carrito.js"></script>
+</body>
+</html>
