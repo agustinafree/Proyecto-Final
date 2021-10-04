@@ -1,3 +1,5 @@
+/* Modal emergente para productos ingresados al carrito, funciones para abrir y cerrar con clicks */
+
 
 let cerrar = document.querySelectorAll(".close")[0]
 let abrir = document.querySelectorAll(".cta")[0]

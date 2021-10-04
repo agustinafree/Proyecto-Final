@@ -26,17 +26,15 @@
 			<button id= "Arriba" class="btn" onclick="partearriba()">Parte de Arriba </button>
 			<!-- Carrito emergente -->
 			<a href="#" class="cta" >Carrito<i class="fas fa-shopping-cart"></i></a>
-			<!-- <button id= "Suscrp" class="btn btn-primary" onclick="subscribir('${e.id}')">Suscribite a nuestro Newsletter ♥ </button> -->
-			<!-- <a href="pages/carrito.html" class="nav-link badge fs-3"><i id="iconoCarrito" class="fas fa-shopping-cart"></i></a> -->
 			</nav>
 
 			<div id="suscripcion">
-				<!-- Aquí suscripcion -->
+				<!-- Aquí se crea la suscripcion -->
 			</div>
 
 			<h2> Todos nuestros productos </h2>
 		</div>
-
+        <!-- modal -->
 		<div class="modal-container">
 			<div class="modal modal-close">
 				<p class="close">X</p>
@@ -45,9 +43,8 @@
 						<table class="table">
 							<thead>
 								<tr>					
-									<th scope="col">Nombre</th>
-									<th scope="col">cantidad</th>
-									<th scope="col">Precio</th>
+									<th scope="col">precio total</th>
+									
 								</tr>
 						</thead>
 						<tbody id="tabla-contenedor">
@@ -64,7 +61,7 @@
 		</div>	
 
 
-	
+	<!-- API COVID -->
 		
 	</div>
 
@@ -92,12 +89,12 @@
 
 		</body>
 		
-	
+	<!-- ordenar productos -->
 		<div class="d-flex justiify-content-around">
 			<div class="my-2"> 
 				<label for="ordenar">ordenar</label>
 				<select name="ordenar" id="ordenar">
-					<option value="  "></option>
+					<option value=" ♥ "></option>
 					<option value="menor">Por menor precio</option>
 					<option value="mayor">Por mayor precio</option>
 				</select>
@@ -107,18 +104,22 @@
 
 		<div class="contenedor">
 			<div id="contenedor-productos"></div>
-			
-
-
 					
-			
 	</div>
-		<!-- productos -->
+		
+	<!-- productos -->
 		<div class="producto-carrito">
+
 		</div>
 
+<!-- api wpp flotante -->
+	<div>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<a href="https://api.whatsapp.com/send?phone=5195508107&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+	<i class="fa fa-whatsapp my-float"></i>
+	</a>
+</div>
 			
-	
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- Sweet Alert -->
