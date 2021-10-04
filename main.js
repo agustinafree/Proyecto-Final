@@ -1,4 +1,4 @@
-// Window.onload para que se ejecute cuando todo termino y no haya riesgos ;) //
+// Window.onload para que se ejecute cuando todo termino y no haya riesgos //
 
 window.onload = () =>{
 	mostrarProductos(productos);
@@ -6,11 +6,7 @@ window.onload = () =>{
 	
 }
 
-//-----Variables----// pasar a Jquery 
-let subtotal = 0;
-let listaProductos;
-
-//let carrito = []
+//Json con los productos creados en el DOM y constantes// 
 
 $.getJSON("productos.json", function(req,res){
 	if(res === "success"){
@@ -76,7 +72,7 @@ function agregarCarrito(producto) {
 	JSON.parse (localStorage.getItem('carrito')): [];
 	carrito.push(producto)
 	//guardar Storage
-	//let carritoParseado = JSON.stringify(carrito); mejor hacer =>
+	//carritoParseado 
 	localStorage.setItem('carrito', JSON.stringify(carrito));
 	mostrarCarrito(carrito);
 
@@ -101,47 +97,8 @@ function quitarProductoCarrito(id){
 	localStorage.setItem ('carrito', JSON.stringify(carritoQuitar));
 	mostrarCarrito(carritoQuitar);
 }
-/////////////////////////
-const titulo = document.getElementById('titulo')
-const contenedor = document.getElementById('contenedor')
-const tableBody = document.getElementById('tabla-contenedor')
-const carrito = []
-function agregarAlCarrito(prodId) {
 
-    let producto = productos.find( (el) => el.id === prodId )
-    carrito.push( producto )
- 
-    mostrarCompra()
-    console.log(carrito.precio)
-
-    document.getElementById("total").innerHTML = carrito.reduce(getSum, 0);
-
-    function getSum(total, num) {
-        return total + Math.round(num);
-     }
-    }
-
-const mostrarCompra = () => {
-
-    tableBody.innerHTML = ""
-
-    carrito.forEach( (prod) => {
-        const tr = document.createElement('tr')
-        tr.className = "table table-dark table-striped"
-        tr.innerHTML = `
-            
-            <td>${prod.nombre}</td>
-            <td>x${prod.cantidad}</td>
-            <td>$${prod.precio}</td>
-            
-        `    
-        tableBody.appendChild(tr)
-    })
-    
-}
-
-
-// Funciones mostrar productos del carrito // con un While que limpia el HTML:
+// Funciones mostrar productos del carrito en el modal // con un While que limpia el HTML:
 
  function mostrarCarrito(carrito){
 	while (contenedor_carrito.firstChild) {
@@ -208,41 +165,3 @@ $(document).ready(function() {
     }
 
 })
-
-//---------- ordenar productos-----------//
-
-$("#ordenar").on("change", (e)=>{ 
-    console.log(e.target.value)
-    switch(e.target.value){
-        case "menor":
-            let menorPrecio=(listaProductos.productos).sort(function (a, b) {
-                if (a.precio > b.precio) {
-                  return 1;
-                }
-                if (a.precio < b.precio) {
-                  return -1;
-                }
-                // a must be equal to b
-                return 0;
-              });    
-            let produtoOrdenado= new Productos(menorPrecio);
-            console.log(produtoOrdenado);
-            produtoOrdenado.render("#producto-carrito");            
-            break;
-        case "mayor":
-            let mayorPrecio=(listaProductos.productos).sort(function (a, b) {
-                if (b.precio > a.precio) {
-                  return 1;
-                }
-                if (b.precio < a.precio) {
-                  return -1;
-                }
-                // a must be equal to b
-                return 0;
-              });    
-            let ordenadoMayorPrecio= new Productos(mayorPrecio);
-            console.log(ordenadoMayorPrecio);
-            ordenadoMayorPrecio.render("#producto-carrito");
-            
-		} 
-});
